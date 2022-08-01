@@ -6,13 +6,20 @@ public class Car extends VehicleAbstract {
 
     private  static final double INCREASE_OF_CONSUMPTION = 0.9;
 
-    public Car(double fuelQuantity, double fuelConsumption) {
-        super(fuelQuantity, fuelConsumption  + INCREASE_OF_CONSUMPTION);
+    public Car(double fuelQuantity, double fuelConsumption,int tankCapacity) {
+        super(fuelQuantity, fuelConsumption  + INCREASE_OF_CONSUMPTION, tankCapacity);
     }
 
     @Override
     public void refuel(double litters) {
-        setFuelQuantity(getFuelQuantity() + litters);
+        if (litters <= 0){
+            throw new IllegalArgumentException("Fuel must be a positive number");
+        }
+        if ((getFuelQuantity() + litters) > tankCapacity){
+            throw new IllegalArgumentException("Cannot fit fuel in tank");
+        }else {
+            setFuelQuantity(getFuelQuantity() + litters);
+        }
     }
 
     @Override
