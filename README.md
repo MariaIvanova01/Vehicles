@@ -2,6 +2,10 @@
 
 Write a program that models 2 vehicles (Car and Truck) and will be able to simulate driving and refueling them in the summer. Car and truck both have fuel quantity, and fuel consumption in liters per km and can be driven given distance and refueled with given liters. But in the summer both vehicles use the air conditioner and their fuel consumption per km is increased by 0.9 liters for the car and 1.6 liters for the truck. Also, the truck has a tiny hole in its tank and when it gets refueled it gets only 95% of the given fuel. The car has no problems when refueling and adds all given fuel to its tank. If the vehicle cannot travel a given distance its fuel does not change.
 
+For the Extention please go to https://github.com/MariaIvanova01/Vehicles/tree/VehiclesExtentionBranch
+-------------------------------------------------------------------------------------------------------------
+
+
 Input
 --------------
 
@@ -63,3 +67,4 @@ Drive Car 13.5 | Truck: 109.13
 Refuel Truck 10.300 |
 Drive Truck 56.2 |
 Refuel Car 100.2 |	
+
